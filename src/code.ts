@@ -7,12 +7,10 @@ figma.ui.onmessage = msg => {
   if (msg.type === 'coolors-url') {
 
     let urlForSamleTesting = msg.url;
-    let urlSample = urlForSamleTesting.substring(0,18);
-    console.log(urlSample);
-    const regexTest = /^([a-f0-9]{6})\-([a-f0-9]{6})\-([a-f0-9]{4})/
+    let urlSample = urlForSamleTesting.substring(0,13); //Sample first 13 characters on the input
+    const regexTest = /^([a-f0-9]{6})\-([a-f0-9]{6})/ //tamplete regex of at 2 first colours ie. ffffff-ffffff
     
-    if(urlSample == 'https://coolors.co' || regexTest.test(urlSample)) {
-      console.log('Valid');
+    if(urlSample == 'https://coolo' || regexTest.test(urlSample)) {
       const nodes = []
       const UrlFromForm = msg.url;
       let arrOfCollors = UrlFromForm.split('-');
@@ -41,8 +39,6 @@ figma.ui.onmessage = msg => {
       figma.closePlugin()
     }
     else{
-      
-      console.log('invalid'); 
       figma.closePlugin()
     }
    
