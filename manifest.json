@@ -1,6 +1,6 @@
 {
-  "name": "Bring your Coolors pallete into Figma",
-  "id": "862788173414241141",
+  "name": "Bring your Coolors pallet into Figma",
+  "id": "867494723165643537",
   "api": "1.0.0",
   "main": "dist/code.js",
   "ui": "dist/ui.html"
